@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5R-bq-TYL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXJ-rT-dEU">
+                            <rect key="frame" x="339" y="33" width="21" height="22"/>
+                            <state key="normal" image="btn_undo">
+                                <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fXJ-rT-dEU" firstAttribute="top" secondItem="V5R-bq-TYL" secondAttribute="top" constant="33" id="Oh2-B6-0kj"/>
+                        <constraint firstAttribute="trailing" secondItem="fXJ-rT-dEU" secondAttribute="trailing" constant="15" id="dWa-eE-cxg"/>
+                        <constraint firstAttribute="height" constant="64" id="n3d-9Y-OeK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.28627450980000002" green="0.83921568629999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="V5R-bq-TYL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5wN-Xk-Klk"/>
+                <constraint firstItem="V5R-bq-TYL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7WN-Wd-TwQ"/>
+                <constraint firstAttribute="trailing" secondItem="V5R-bq-TYL" secondAttribute="trailing" id="XTx-5i-LNW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_undo" width="21" height="21"/>
+    </resources>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Irusu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-Dd-Z3X">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Un4-e1-II6">
+                                        <rect key="frame" x="339" y="33" width="21" height="22"/>
+                                        <state key="normal" image="btn_undo">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoButtonTapped" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eRa-wx-0Rq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="AZK-3T-hPg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Un4-e1-II6" secondAttribute="trailing" constant="15" id="Hvd-9L-8eF"/>
+                                    <constraint firstItem="Un4-e1-II6" firstAttribute="top" secondItem="Mnc-Dd-Z3X" secondAttribute="top" constant="33" id="hkg-Rp-tIJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYW-p3-aUa" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="18" y="64" width="339" height="465"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gYW-p3-aUa" secondAttribute="height" multiplier="73:100" id="BQA-dc-G8d"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28627450980392155" green="0.83921568627450982" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gYW-p3-aUa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="18" id="3hi-pX-z59"/>
+                            <constraint firstItem="gYW-p3-aUa" firstAttribute="top" secondItem="Mnc-Dd-Z3X" secondAttribute="bottom" id="9Fe-nn-0cM"/>
+                            <constraint firstAttribute="trailing" secondItem="Mnc-Dd-Z3X" secondAttribute="trailing" id="El4-OJ-PK9"/>
+                            <constraint firstAttribute="trailing" secondItem="gYW-p3-aUa" secondAttribute="trailing" constant="18" id="OcS-f2-rh2"/>
+                            <constraint firstItem="Mnc-Dd-Z3X" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="QjZ-sZ-jkR"/>
+                            <constraint firstItem="Mnc-Dd-Z3X" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="QkW-aP-z3z"/>
+                            <constraint firstItem="Mnc-Dd-Z3X" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="uQR-Gy-lTq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QjZ-sZ-jkR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="lUU-ie-1Kn"/>
+                    <connections>
+                        <outlet property="kolodaView" destination="gYW-p3-aUa" id="y9Q-uq-6fp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="135.38230884557723"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_undo" width="21" height="21"/>
+    </resources>
+</document>
